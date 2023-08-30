@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="background-color: black;">
+<head>
+<title>Ander Morales</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .resolucion {width: 99%;text-align: center;}
+
+        /* PC */
+        @media (min-width: 991px) {.movil {display: none} .tablet{display: none}}
+        /* Móvil */
+        @media (max-width: 767px) {.pc {display: none} .tablet{display: none}}
+        /* Tablet */
+        @media (min-width: 767px) and (max-width:991px) {.pc {display: none} .movil{display: none}}
+
+        .header {padding: 20px;text-align: center; color:white;font-family: Arial, Helvetica, sans-serif;
+            background-color: black; color: white;text-decoration: none}
+
+        .ulnav {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: white; font-size: 18px;}
+        .linav {float: left;display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;}
+        .linav:hover {background-color: black;color: white; cursor: pointer}
+        .linav a {color: black;text-decoration: none;}
+        .linav a:visited {text-decoration: none;}
+        .linav:hover a {color:black;}
+        .home {float: left;display: block;background-color: rgb(231, 255, 175);color: black;text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;}
+        .linav2 {float: right; background-color: rgb(231, 255, 175); display: block; text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;color: black}
+        .linav2 a:visited {text-decoration: none}
+        .linav2 a {color: black;text-decoration: none;}
+
+        * {box-sizing: border-box;}
+        .column {float: left;padding: 10px;}
+        .column.left {width: 25%; float: center;}
+        .column.right {width: 75%;}
+        .row::after {content: "";display: table;clear: both;}
+        .row2::after {content: "";display: table;clear: both;}
+        .column.mid {width: 50%;}
+        .column.right2 {width: 25%;}
+
+        .footer {text-align: center;padding: 10px;color: white}
+        
+        .body {background-color: black; color: white}
+
+        .lista {list-style: none;}
+        .li3 {padding-left: 20px; padding-top: 20px;color: white;font-family: Arial, Helvetica, sans-serif;}
+
+        h3 {padding-left: 15px;padding-top: 10px;color: white;font-family: Arial, Helvetica, sans-serif;}
+
+        /* El menu hamburguesa del móvil */
+        .menu {display: inline-block;cursor: pointer;padding: 5px;}
+        .bar {width: 25px;height: 3px;background-color: white;margin: 5px 0;}
+        .nav-menu {display: none;}
+        .nav-menu.active {display: block;} 
+        .nav-menu ul {list-style: none;}
+        .nav-menu li {margin: 10px 0px}
+        .nav-menu a {text-decoration: none;}
+        .nav-menu a:visited {color: white}
+
+        .ulmenu {list-style-type: none;overflow: hidden;background-color: black;}
+        .limenu {color: white; font-size: 16px; font-family: Arial, Helvetica, sans-serif}
+        .limenu a {color: white}
+        .limenu a:visited {color: white; text-decoration: none;}
+
+        .iconomovil {max-width: 16px; max-height: 16px; font-size: smaller;}
+        .buttonmovil {font-size: 12px; background-color: white;border: none;color: black;text-align: center;text-decoration: none;display: inline-block;cursor: pointer; font-family: Arial, Helvetica, sans-serif;
+                        padding: 2px; margin: 4px 2px; width: 65px; height: 35px;}
+        .buttonmovil:hover {color: white;background-color: black; border-color: white; border: 2px solid;}
+        .horizontal-listmovil {list-style: none;display: flex;padding: 2px;float: center;}
+        .horizontal-listmovil li {margin-right: 10px}
+
+        /* Tablet */
+        .menutablet {display: inline-block;cursor: pointer;padding: 5px;}
+        .nav-menutablet {display: none;}
+        .nav-menutablet.active {display: block;} 
+        .nav-menutablet ul {list-style: none;}
+        .nav-menutablet li {margin: 10px 0px}
+        .nav-menutablet a {text-decoration: none;}
+        .nav-menutablet a:visited {color: white}
+
+        .ulmenutablet {list-style-type: none;overflow: hidden;background-color: black;}
+        .limenutablet {color: white; font-size: 20px; font-family: Arial, Helvetica, sans-serif}
+        .limenutablet a {color: white}
+        .limenutablet a:visited {color: white; text-decoration: none;}
+
+        .iconotablet {max-width: 24px; max-height: 24px; font-size: smaller;}
+        .buttontablet {font-size: 14px; background-color: white;border: none;color: black;text-align: center;text-decoration: none;display: inline-block;cursor: pointer; font-family: Arial, Helvetica, sans-serif;
+                        padding: 4px; margin: 6px 4px; width: 80px; height: 50px;}
+</style>
+
+</head>
+<body>
+<div class="pc">
+    <div class="header"><h1 class="borde">ANDER MORALES</h1></div>
+
+    <ul class="ulnav">
+        <a href="index.html"><li class="linav">Home</li></a>
+        <a href="bio.html"><li class="linav">Biography</li></a>
+        <a href="shop.html"><li class="linav">Merch</li></a>
+        <a href="events.html"><li class="linav">Events</li></a>
+        <li class="linav2">Contact</li>
+    </ul>
+
+    <h3>If you want to contact with me for any reason:</h3>
+
+    <ul class="lista">
+        <li class="li3">E-mail: andermoralescontact@gmail.com</li>
+    </ul>
+    <div class="footer"><h3>ANDER MORALES</h3></div>
+</div>
+
+<div class="movil"> 
+    <div class="header" style="font-size: 12px;"><h1>ANDER MORALES</h1></div>
+
+    <div class="menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+        <ul class="ulmenu">
+            <a href="index.html"><li class="limenu"></li>Home</li></a>
+            <a href="bio.html"><li class="limenu">Biography</li></a>
+            <a href="shop.html"><li class="limenu">Merch</li></a>
+            <a href="events.html"><li class="limenu">Events</li></a>
+            <a href="contact.html"><li class="limenu">Contact</li></a>
+        </ul>
+    </nav>
+
+    <h3>If you want to contact with me for any reason:</h3>
+
+    <ul class="lista">
+        <li class="li3">E-mail: andermoralescontact@gmail.com</li>
+    </ul>
+
+    <div class="footer"><h3 style="font-size: 8px;">ANDER MORALES</h3></div>
+</div>
+
+<div class="tablet">
+    <div class="header" style="font-size: 20px;"><h1>ANDER MORALES</h1></div>
+
+    <div class="menutablet">
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+    </div>
+    <nav class="nav-menutablet">
+        <ul class="ulmenutablet">
+            <a href="index.html"><li class="limenutablet"></li>Home</li></a>
+            <a href="bio.html"><li class="limenutablet">Biography</li></a>
+            <a href="shop.html"><li class="limenutablet">Merch</li></a>
+            <a href="events.html"><li class="limenutablet">Events</li></a>
+            <a href="contact.html"><li class="limenutablet">Contact</li></a>
+        </ul>
+    </nav>
+
+    <h3>If you want to contact with me for any reason:</h3>
+
+    <ul class="lista">
+        <li class="li3">E-mail: andermoralescontact@gmail.com</li>
+    </ul>
+
+    <div class="footer"><h3 style="font-size: 10px;">ANDER MORALES</h3></div>
+</div>
+
+<script>
+    const menuToggle = document.querySelector('.menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    const menuToggletablet = document.querySelector('.menutablet');
+    const navMenutablet = document.querySelector('.nav-menutablet');
+
+    menuToggletablet.addEventListener('click', () => {
+    navMenutablet.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
