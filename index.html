@@ -1,88 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: black;">
 <head>
 <title>Ander Morales</title>
-    <meta charset="hola">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .header {padding: 20px;text-align: center; color:white;font-family: Arial, Helvetica, sans-serif;
-                background-color: black; color: white;}
+        .resolucion {width: 99%;text-align: center;}
 
-        .ul1 {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: black;}
-        .li1 {float: left;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
-        .li1:hover {background-color: white;color: black}
-        .li1 a {color: white;text-decoration: none;}
-        .li1 a:visited {text-decoration: none;}
-        .li1:hover a {color:black}
-        .home {float: left;display: block;background-color: rgb(231, 255, 175);color: black;text-align: center;padding: 14px 16px;text-decoration: none;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        /* PC */
+        @media (min-width: 991px) {.movil {display: none} .tablet{display: none}}
+        /* Móvil */
+        @media (max-width: 767px) {.pc {display: none} .tablet{display: none}}
+        /* Tablet */
+        @media (min-width: 767px) and (max-width:991px) {.pc {display: none} .movil{display: none}}
         
+        .header {padding: 20px;text-align: center; color:white;font-family: Arial, Helvetica, sans-serif;
+                background-color: black; color: white;text-decoration: none}
+        
+        /* ulnav es la navigation bar del pc */
+        .ulnav {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: white; font-size: 18px;}
+        .linav {float: left;display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;}
+        .linav:hover {background-color: black;color: white; cursor: pointer}
+        .linav a {color: black;text-decoration: none;}
+        .linav a:visited {text-decoration: none}
+        .linav:hover a {color:black;}
+        .home {float: left;display: block;background-color: rgb(231, 255, 175);color: black;text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;}
+        .linav2 {float: right; background-color: rgb(231, 255, 175); display: block; text-align: center;padding: 14px 16px;text-decoration: none;font-family: Arial, Helvetica, sans-serif; color: black}
+        .linav2:hover {background-color: black;color: white; cursor: pointer}
+        .linav2 a {color: black;text-decoration: none;}
+        .linav2 a:visited {text-decoration: none}
+        
+        /* Columna y fila */
         * {box-sizing: border-box;}
         .column {float: left;padding: 10px;}
-        .column.left {width: 25%;}
+        .column.left {width: 25%; float: center; justify-content: center; align-items: center; text-align: center;}
         .column.right {width: 75%;}
         .row::after {content: "";display: table;clear: both;}
-        .row {background-color: black;}
-
-        .footer {background-color: black;text-align: center;padding: 10px;}
         
-        .body {background-color: black; color: white}
+        .footer {text-align: center;padding: 10px;color: white}
+            /* rgb(231, 255, 175) */
+        .body {color: white}
 
-        .button {background-color: white;border: none;color: black;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 19px;margin: 4px 2px;cursor: pointer;}
-        .button:hover {color: white;background-color: black;}
+        .button {background-color: white;border: none;color: black;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 19px;margin: 4px 2px;cursor: pointer; font-family: Arial, Helvetica, sans-serif}
+        .button:hover {color: white;background-color: black; border-color: white; border: 2px solid;}
 
         .horizontal-list {
-      list-style: none; /* Elimina los puntos/bolitas de la lista */
-      display: flex; /* Cambia el comportamiento a un contenedor flexible */
-      padding: 0; /* Elimina el espacio interno de la lista */
-    }
+        list-style: none; /* Elimina los puntos/bolitas de la lista */
+        display: flex; /* Cambia el comportamiento a un contenedor flexible */
+        padding: 20px; /* Elimina el espacio interno de la lista */; align-items: center; /*Así pongo los items igual*/;
+        }
 
-    .horizontal-list li {
-      margin-right: 20px; /* Agrega espacio entre los elementos de la lista */
-    }
+        .horizontal-list li {margin-right: 20px; /* Agrega espacio entre los elementos de la lista */;}
+
+        h3 {font-family: Arial, Helvetica, sans-serif; color: white;}
+        h4 {font-family: Arial, Helvetica, sans-serif; color: white;}
+
+        /* El menu hamburguesa del móvil */
+        .menu {display: inline-block;cursor: pointer;padding: 5px;}
+        .bar {width: 25px;height: 3px;background-color: white;margin: 5px 0;}
+        .nav-menu {display: none;}
+        .nav-menu.active {display: block;} 
+        .nav-menu ul {list-style: none;}
+        .nav-menu li {margin: 10px 0px}
+        .nav-menu a {text-decoration: none;}
+        .nav-menu a:visited {color: white}
+
+        .ulmenu {list-style-type: none;overflow: hidden;background-color: black;}
+        .limenu {color: white; font-size: 16px; font-family: Arial, Helvetica, sans-serif}
+        .limenu a {color: white}
+        .limenu a:visited {color: white; text-decoration: none;}
+
+        .iconomovil {max-width: 16px; max-height: 16px; font-size: smaller;}
+        .buttonmovil {font-size: 12px; background-color: white;border: none;color: black;text-align: center;text-decoration: none;display: inline-block;cursor: pointer; font-family: Arial, Helvetica, sans-serif;
+                        padding: 2px; margin: 4px 2px; width: 65px; height: 35px;}
+        .buttonmovil:hover {color: white;background-color: black; border-color: white; border: 2px solid;}
+        .horizontal-listmovil {list-style: none;display: flex;padding: 2px;float: center;}
+        .horizontal-listmovil li {margin-right: 10px}
+
+        /* Tablet */
+        .menutablet {display: inline-block;cursor: pointer;padding: 5px;}
+        .nav-menutablet {display: none;}
+        .nav-menutablet.active {display: block;} 
+        .nav-menutablet ul {list-style: none;}
+        .nav-menutablet li {margin: 10px 0px}
+        .nav-menutablet a {text-decoration: none;}
+        .nav-menutablet a:visited {color: white}
+
+        .ulmenutablet {list-style-type: none;overflow: hidden;background-color: black;}
+        .limenutablet {color: white; font-size: 20px; font-family: Arial, Helvetica, sans-serif}
+        .limenutablet a {color: white}
+        .limenutablet a:visited {color: white; text-decoration: none;}
+
+        .iconotablet {max-width: 24px; max-height: 24px; font-size: smaller;}
+        .buttontablet {font-size: 14px; background-color: white;border: none;color: black;text-align: center;text-decoration: none;display: inline-block;cursor: pointer; font-family: Arial, Helvetica, sans-serif;
+                        padding: 4px; margin: 6px 4px; width: 80px; height: 50px;}
     </style>
 
 </head>
 <body>
-    <div class="header"><h1 class="borde">ANDER MORALES</h1></div>
 
-    
-    
+<div class="pc">
+    <div class="header"><h1>ANDER MORALES</h1></div>
 
-
-    <ul class="ul1">
+    <ul class="ulnav">
         <li class="home">Home</li>
-        <li class="li1">Merch</li></a>
-        <li class="li1">Eventos</li></a>
-
+        <a href="bio.html"><li class="linav">Biography</li></a>
+        <a href="shop.html"><li class="linav">Merch</li></a>
+        <a href="events.html"><li class="linav">Events</li></a>
+        <a href="contact.html"><li class="linav2">Contact</li></a>
     </ul>
 
     <div class="row">
-        <h3>Follow me on</h3>
-        <ul class="horizontal-list">
-            <li><a href="https://youtube.com/@andermorales.?si=dDPrx03UIwCuo46n"><button class="button">YouTube</button></a></li>
-            <li><button class="button">Instagram</button></li>
-            <li><button class="button">TikTok</button></li>
-            <li><button class="button">Twitter</button></li>
+        <ul class="horizontal-list" style="justify-content: center;">
+            <li><h4 style="color: white;font-family: Arial, Helvetica, sans-serif;">Follow me on:</h4></li>
+            <li><a href="https://youtube.com/@andermorales.?si=dDPrx03UIwCuo46n"><img src="Media/Youtube_logo.png" alt="Youtube" width="60" height="40"></a></li>
+            <li><a href="https://www.instagram.com/andermorales218/"><img src="Media/instagram.png" alt="Instagram" width="70" height="65" ></a></li>
+            <li><a href="https://www.tiktok.com/@ander218_"><img src="Media/tiktok.png" alt="TikTok" width="70" height="65"></a></li>
+            <li><a href="https://twitter.com/AnderMorales_?s=09"><img src="Media/twitter.webp" alt="Twitter" width="55" height="55"></a></li>
+            <li><a href="https://youtube.com/@Derles218?si=NTK-a0W_Vfvk-l0M"><img src="Media/Youtube_logo.png" alt="Youtube" width="60" height="40"></a></li>
+            <li><a href="https://www.twitch.tv/derles218"><img src="Media/twitch.png" alt="Twitch" width="65" height="60"></a></li>
         </ul>
         
-        
-        
-        
-        <button class="button">Spotify</button>
-        <button class="button">Apple Music</button>
-        <button class="button">Amazon Music</button>
-        <button class="button">Deezer</button>
-        <button class="button">Tidal</button>
-        <div class="column left">
+        <h4 style="padding-top: 20px; padding-left: 20px;">You can stream my music on:</h4>
+        <ul class="horizontal-list">
+            <li><a href="https://open.spotify.com/artist/04pBylYKXSToW6PoIcQHKO?si=HlLgeQioQBaXlH_Aew1XmA"><button class="button">Spotify</button></a></li>
+            <li><a href="https://music.apple.com/es/artist/ander-morales/1528146448"><button class="button">Apple Music</button></a></li>
+            <li><a href="https://music.amazon.es/profiles/r5s6ztc3ahdecricttwt7xouue?ref=dm_sh_eObcIHhPA6LAt38BSMZw8ELWj"><button class="button">Amazon Music</button></a></li>
+            <li><a href="https://www.deezer.com/es/artist/104356232"><button class="button">Deezer</button></a></li>
+            <li><a href="https://tidal.com/browse/artist/20956364"><button class="button">Tidal</button></a></li>
+            <li><a href="https://music.youtube.com/channel/UCHByon8GLfwVg9wmaVLF9dw"><button class="button">YouTube Music</button></a></li>
+        </ul>
 
+        
+        
+        <div class="column left">
+            <img src="Media/Picsart_23-08-01_23-57-43-972.jpg" alt="Blazing Waves" width="200px" height="200px" style="max-width: 100%;display: block;margin: 0 auto; padding: 15px;">
         </div>
 
         <div class="column right">
-
+            <h3 style="padding-left: 20px; padding-top: 5px;">"BLAZING WAVES" OUT NOW!</h3>
+            <ul class="horizontal-list">
+                <li><a href="https://open.spotify.com/track/7h911xR0lynuz0aLPGnK22?si=2d668dba54f547a5"><button class="button">Spotify</button></a></li>
+                <li><a href="https://music.apple.com/es/album/blazing-waves-single/1704313733"><button class="button">Apple Music</button></a></li>
+                <li><a href="https://music.amazon.com/albums/B0CGLXQM7S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_vagr36VpG5SghBKT2KWh6Ival&trackAsin=B0CGLYKHGB"><button class="button">Amazon Music</button></a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="footer">
-        <p style="color: white; font-family: Arial, Helvetica, sans-serif;">Ander Morales</p>
+    <div class="footer"><h3>ANDER MORALES</h3></div>
+</div>
+
+<div class="movil"> 
+    <div class="header" style="font-size: 12px;"><h1>ANDER MORALES</h1></div>
+
+    <div class="menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+        <ul class="ulmenu">
+            <a href="index.html"><li class="limenu"></li>Home</li></a>
+            <a href="bio.html"><li class="limenu">Biography</li></a>
+            <a href="shop.html"><li class="limenu">Merch</li></a>
+            <a href="events.html"><li class="limenu">Events</li></a>
+            <a href="contact.html"><li class="limenu">Contact</li></a>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <h4 style="font-size: 10px;color: white;font-family: Arial, Helvetica, sans-serif; text-align: center;">Follow me on:</h4>
+        <ul class="horizontal-listmovil" style="justify-content: center;">
+            <li style="margin-right: 13px"><a href="https://youtube.com/@andermorales.?si=dDPrx03UIwCuo46n"><img class="iconomovil" src="Media/Youtube_logo.png" alt="Youtube" width="60" height="12"></a></li>
+            <li style="margin-right: 13px"><a href="https://www.instagram.com/andermorales218/"><img class="iconomovil" src="Media/instagram.png" alt="Instagram" width="70" height="65" ></a></li>
+            <li style="margin-right: 13px"><a href="https://www.tiktok.com/@ander218_"><img class="iconomovil" src="Media/tiktok.png" alt="TikTok" width="70" height="65"></a></li>
+            <li style="margin-right: 13px"><a href="https://twitter.com/AnderMorales_?s=09"><img class="iconomovil" src="Media/twitter.webp" alt="Twitter" width="55" height="55"></a></li>
+            <li style="margin-right: 13px"><a href="https://youtube.com/@Derles218?si=NTK-a0W_Vfvk-l0M"><img class="iconomovil" src="Media/Youtube_logo.png" alt="Youtube" width="60" height="12"></a></li>
+            <li style="margin-right: 13px"><a href="https://www.twitch.tv/derles218"><img class="iconomovil" src="Media/twitch.png" alt="Twitch" width="65" height="60"></a></li>
+        </ul>
+        
+        <h4 style="text-align: center; font-size: 10px;">You can stream my music on:</h4>
+        <ul class="horizontal-listmovil" style="justify-content: center;">
+            <li><a href="https://open.spotify.com/artist/04pBylYKXSToW6PoIcQHKO?si=HlLgeQioQBaXlH_Aew1XmA"><button class="buttonmovil">Spotify</button></a></li>
+            <li><a href="https://music.apple.com/es/artist/ander-morales/1528146448"><button class="buttonmovil">Apple Music</button></a></li>
+            <li><a href="https://music.amazon.es/profiles/r5s6ztc3ahdecricttwt7xouue?ref=dm_sh_eObcIHhPA6LAt38BSMZw8ELWj"><button class="buttonmovil">Amazon Music</button></a></li>
+        </ul>
+        <ul class="horizontal-listmovil" style="justify-content: center;">
+            <li><a href="https://www.deezer.com/es/artist/104356232"><button class="buttonmovil">Deezer</button></a></li>
+            <li><a href="https://tidal.com/browse/artist/20956364"><button class="buttonmovil">Tidal</button></a></li>
+            <li><a href="https://music.youtube.com/channel/UCHByon8GLfwVg9wmaVLF9dw"><button class="buttonmovil">YouTube Music</button></a></li>
+        </ul>
+        
+        <div class="column left">
+            <img src="Media/Picsart_23-08-01_23-57-43-972.jpg" alt="Blazing Waves" width="65px" height="65px" style="display: flex;margin: 0 auto; padding: 3px;">
+        </div>
+
+        <div class="column right">
+            <h3 style="padding-left: 3px; font-size: 12px;">"BLAZING WAVES" OUT NOW!</h3>
+            <ul class="horizontal-listmovil">
+                <li><a href="https://open.spotify.com/track/7h911xR0lynuz0aLPGnK22?si=2d668dba54f547a5"><button class="buttonmovil">Spotify</button></a></li>
+                <li><a href="https://music.apple.com/es/album/blazing-waves-single/1704313733"><button class="buttonmovil">Apple Music</button></a></li>
+                <li><a href="https://music.amazon.com/albums/B0CGLXQM7S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_vagr36VpG5SghBKT2KWh6Ival&trackAsin=B0CGLYKHGB"><button class="buttonmovil">Amazon Music</button></a></li>
+            </ul>
+            <ul class="horizontal-listmovil">
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer"><h3 style="font-size: 8px;">ANDER MORALES</h3></div>
+</div>
+
+<div class="tablet">
+    <div class="header" style="font-size: 20px;"><h1>ANDER MORALES</h1></div>
+
+    <div class="menutablet">
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+        <div class="bar" style="width: 40px;height: 6px;background-color: white;margin: 5px 0;"></div>
+    </div>
+    <nav class="nav-menutablet">
+        <ul class="ulmenu">
+            <li class="limenu"></li>Home</li>
+            <li class="limenu"><a href="bio.html">Biography</a></li>
+            <a href="shop.html"><li class="limenu">Merch</li></a>
+            <a href="events.html"><li class="limenu">Events</li></a>
+            <a href="contact.html"><li class="limenu">Contact</li></a>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <h4 style="font-size: 14px;color: white;font-family: Arial, Helvetica, sans-serif; text-align: center;">Follow me on:</h4>
+        <ul class="horizontal-listmovil" style="justify-content: center;">
+            <li style="margin-right: 16px"><a href="https://youtube.com/@andermorales.?si=dDPrx03UIwCuo46n"><img class="iconotablet" src="Media/Youtube_logo.png" alt="Youtube" width="60" height="15"></a></li>
+            <li style="margin-right: 16px"><a href="https://www.instagram.com/andermorales218/"><img class="iconotablet" src="Media/instagram.png" alt="Instagram" width="70" height="65" ></a></li>
+            <li style="margin-right: 16px"><a href="https://www.tiktok.com/@ander218_"><img class="iconotablet" src="Media/tiktok.png" alt="TikTok" width="70" height="65"></a></li>
+            <li style="margin-right: 16px"><a href="https://twitter.com/AnderMorales_?s=09"><img class="iconotablet" src="Media/twitter.webp" alt="Twitter" width="55" height="55"></a></li>
+            <li style="margin-right: 16px"><a href="https://youtube.com/@Derles218?si=NTK-a0W_Vfvk-l0M"><img class="iconotablet" src="Media/Youtube_logo.png" alt="Youtube" width="60" height="15"></a></li>
+            <li style="margin-right: 16px"><a href="https://www.twitch.tv/derles218"><img class="iconotablet" src="Media/twitch.png" alt="Twitch" width="65" height="60"></a></li>
+        </ul>
+        
+        <h4 style="text-align: center; font-size: 14px;">You can stream my music on:</h4>
+        <ul class="horizontal-listmovil" style="justify-content: center;">
+            <li><a href="https://open.spotify.com/artist/04pBylYKXSToW6PoIcQHKO?si=HlLgeQioQBaXlH_Aew1XmA"><button class="buttontablet">Spotify</button></a></li>
+            <li><a href="https://music.apple.com/es/artist/ander-morales/1528146448"><button class="buttontablet">Apple Music</button></a></li>
+            <li><a href="https://music.amazon.es/profiles/r5s6ztc3ahdecricttwt7xouue?ref=dm_sh_eObcIHhPA6LAt38BSMZw8ELWj"><button class="buttontablet">Amazon Music</button></a></li>
+            <li><a href="https://www.deezer.com/es/artist/104356232"><button class="buttontablet">Deezer</button></a></li>
+            <li><a href="https://tidal.com/browse/artist/20956364"><button class="buttontablet">Tidal</button></a></li>
+            <li><a href="https://music.youtube.com/channel/UCHByon8GLfwVg9wmaVLF9dw"><button class="buttontablet">YouTube Music</button></a></li>
+        </ul>
+        
+        <div class="column left">
+            <img src="Media/Picsart_23-08-01_23-57-43-972.jpg" alt="Blazing Waves" width="140px" height="140px" style="display: flex;margin: 0 auto; padding: 3px; max-width: 100%; max-height: 100%;">
+        </div>
+
+        <div class="column right">
+            <h3 style="padding-left: 3px; font-size: 17px;">"BLAZING WAVES" OUT NOW!</h3>
+            <ul class="horizontal-listmovil">
+                <li><a href="https://open.spotify.com/track/7h911xR0lynuz0aLPGnK22?si=2d668dba54f547a5"><button class="buttontablet">Spotify</button></a></li>
+                <li><a href="https://music.apple.com/es/album/blazing-waves-single/1704313733"><button class="buttontablet">Apple Music</button></a></li>
+                <li><a href="https://music.amazon.com/albums/B0CGLXQM7S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_vagr36VpG5SghBKT2KWh6Ival&trackAsin=B0CGLYKHGB"><button class="buttontablet">Amazon Music</button></a></li>
+            </ul>
+            <ul class="horizontal-listmovil">
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer"><h3 style="font-size: 10px;">ANDER MORALES</h3></div>
+</div>
+
+<script>
+    const menuToggle = document.querySelector('.menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    const menuToggletablet = document.querySelector('.menutablet');
+    const navMenutablet = document.querySelector('.nav-menutablet');
+
+    menuToggletablet.addEventListener('click', () => {
+    navMenutablet.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
