@@ -34,8 +34,10 @@
         * {box-sizing: border-box;}
         .column {float: left;padding: 10px;}
         .column.left {width: 25%; float: center; justify-content: center; align-items: center; text-align: center;}
-        .column.right {width: 75%;}
+        .column.mid {width: 50%;}
+        .column.right {width: 25%;}
         .row::after {content: "";display: table;clear: both;}
+
         
         .footer {text-align: center;padding: 10px;color: white}
             /* rgb(231, 255, 175) */
@@ -137,13 +139,17 @@
             <img src="Media/Picsart_23-08-01_23-57-43-972.jpg" alt="Blazing Waves" width="200px" height="200px" style="max-width: 100%;display: block;margin: 0 auto; padding: 15px;">
         </div>
 
-        <div class="column right">
+        <div class="column mid">
             <h3 style="padding-left: 20px; padding-top: 5px;">"BLAZING WAVES" OUT NOW!</h3>
             <ul class="horizontal-list">
                 <li><a href="https://open.spotify.com/track/7h911xR0lynuz0aLPGnK22?si=2d668dba54f547a5"><button class="button">Spotify</button></a></li>
                 <li><a href="https://music.apple.com/es/album/blazing-waves-single/1704313733"><button class="button">Apple Music</button></a></li>
                 <li><a href="https://music.amazon.com/albums/B0CGLXQM7S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_vagr36VpG5SghBKT2KWh6Ival&trackAsin=B0CGLYKHGB"><button class="button">Amazon Music</button></a></li>
             </ul>
+        </div>
+
+        <div class="column right">
+            <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=anderm218-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B09DPR2LZW&linkId=0269343166e0488e4c31f467f136e319"></iframe>
         </div>
     </div>
 
